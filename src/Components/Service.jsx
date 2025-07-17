@@ -1,43 +1,50 @@
 import React from 'react';
-import { FaBullhorn, FaChartLine, FaPencilRuler, FaChartPie, FaSearch, FaUsers } from 'react-icons/fa';
+import {
+  FaBullhorn,
+  FaChartLine,
+  FaPencilRuler,
+  FaChartPie,
+  FaSearch,
+  FaUsers,
+} from 'react-icons/fa';
 
 const services = [
   {
     icon: <FaBullhorn className="w-8 h-8 text-indigo-600" />,
-    title: "Digital Marketing Strategy",
-    desc: "Create data-driven marketing strategies that drive real results and brand growth.",
+    title: "Digital Strategy",
+    desc: "Smart plans for better growth.",
   },
   {
     icon: <FaUsers className="w-8 h-8 text-blue-600" />,
-    title: "Social Media Marketing",
-    desc: "Engage your audience through targeted campaigns on Facebook, Instagram, and more.",
+    title: "Social Marketing",
+    desc: "Targeted campaigns to engage.",
   },
   {
     icon: <FaSearch className="w-8 h-8 text-green-600" />,
-    title: "SEO Optimization",
-    desc: "Increase your website’s ranking and visibility on search engines like Google.",
+    title: "SEO Boost",
+    desc: "Rank higher on Google easily.",
   },
   {
-    icon: <FaPencilRuler className="w-8 h-8 text-pink-600 " />,
+    icon: <FaPencilRuler className="w-8 h-8 text-pink-600" />,
     title: "Content Creation",
-    desc: "Produce professional graphics, videos, and content that connects with your audience.",
+    desc: "Visuals that speak to users.",
   },
   {
     icon: <FaChartLine className="w-8 h-8 text-purple-600" />,
-    title: "Brand Development",
-    desc: "Build a strong, recognizable brand that reflects your values and mission.",
+    title: "Brand Building",
+    desc: "Make your identity stand out.",
   },
   {
     icon: <FaChartPie className="w-8 h-8 text-red-600" />,
-    title: "Analyzing & Reporting",
-    desc: "Get detailed performance reports to track progress and optimize your campaigns.",
+    title: "Analytics",
+    desc: "Track & improve performance.",
   },
 ];
 
 const Service = () => {
   return (
-    <div className="max-w-3xl mx-auto px-4 py-10">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+    <div className="max-w-2xl mx-auto px-4 py-12">
+      <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">
         Our Services
       </h2>
 
@@ -45,12 +52,10 @@ const Service = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition"
+            className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center justify-start text-center h-60"
           >
-            <div className="mb-4">
-              {service.icon}
-            </div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-800">
+            <div className="mb-4">{service.icon}</div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">
               {service.title}
             </h3>
             <p className="text-gray-600 text-sm">

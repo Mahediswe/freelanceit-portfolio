@@ -27,7 +27,7 @@ import logo from "../assetes/Logo.jpeg"
 
 const Navbar = () => {
   return (
-    <div className='max-w-3xl mx-auto flex justify-between items-center px-4 py-3 bg-violet-400'>
+    <div className='max-w-2xl mx-auto flex justify-between items-center px-4 py-3 bg-blue-900'>
       
       {/* Left side: Logo + Title */}
       <div className='flex items-center gap-4'>
@@ -36,9 +36,9 @@ const Navbar = () => {
           alt="Logo" 
           className='w-full h-16 rounded-lg object-cover'
         />
-        <h1 className="text-lg md:text-2xl font-semibold text-gray-800">
+        {/* <h1 className="text-lg md:text-2xl font-semibold text-gray-800">
           Frelance Digital It
-        </h1>
+        </h1> */}
       </div>
 
       {/* Right side: Icon Button */}

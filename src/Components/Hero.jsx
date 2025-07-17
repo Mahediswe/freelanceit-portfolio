@@ -41,7 +41,7 @@ import hero from "../assetes/hero.jpg";
 
 const Hero = () => {
   return (
-    <div className="relative max-w-3xl mx-auto">
+    <div className="relative max-w-2xl mx-auto">
 
       {/* Top Hero Image */}
       <div className="h-100 overflow-hidden rounded-t-lg">
@@ -53,13 +53,14 @@ const Hero = () => {
       </div>
 
       {/* Profile Picture (Floating) */}
-      <div className="absolute top-80 left-1/2 transform -translate-x-1/2 animate-float">
-        <img
-          src={profile}
-          alt="Profile"
-          className="w-32 h-32 rounded-full border-4 border-white shadow-md "
-        />
-      </div>
+<div className="absolute top-[26%] sm:top-16 md:top-72 lg:top-80 left-1/2 -translate-x-1/2 transform animate-float">
+  <img
+    src={profile}
+    alt="Profile"
+    className="w-32 h-32 rounded-full border-4 border-white shadow-md"
+  />
+</div>
+
 
       {/* Bottom Info Section */}
       <div className="bg-slate-100 pt-20 pb-10 px-6 rounded-b-lg shadow-md">
