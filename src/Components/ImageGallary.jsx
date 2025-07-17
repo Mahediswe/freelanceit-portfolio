@@ -33,14 +33,14 @@ const ImageBoxGallery = () => {
       <h2 className="text-2xl font-semibold text-center mb-4">Gallery</h2>
 
       {/* 2x2 Grid Box */}
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 gap-5">
         {images.map((img, index) => (
           <img
             key={index}
             src={img}
             alt={`gallery-${index}`}
             onClick={() => openModal(index)}
-            className="w-full h-100 object-cover rounded cursor-pointer hover:scale-105 transition-transform duration-300"
+            className="w-full h-100 object-cover rounded cursor-pointer hover:scale-105 transition-transform duration-300 rounded-lg"
           />
         ))}
       </div>

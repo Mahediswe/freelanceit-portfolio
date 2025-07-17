@@ -7,10 +7,12 @@ import ContactForm from './ContactForm'
 import Footer from './Footer'
 import ImageGallery from './ImageGallary'
 import QRCodeSection from './QRCodeSection'
+import ShareModal from './ShareModal'
 const Home = () => {
   return (
     <div>
       <Navbar/>
+      <ShareModal/>
       <Hero/>
       <ContactInfo/>
       <ImageGallery/>

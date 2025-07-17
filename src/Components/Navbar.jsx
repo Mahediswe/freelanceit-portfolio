@@ -21,11 +21,14 @@
 
 // export default Navbar
 
-import React from 'react'
+import React, { useState } from "react";
 import { IoMdShare } from "react-icons/io";
 import logo from "../assetes/Logo.jpeg"
+import ShareModal from "./ShareModal";
 
 const Navbar = () => {
+    const [showModal, setShowModal] = useState(false);
+
   return (
     <div className='max-w-2xl mx-auto flex justify-between items-center px-4 py-3 bg-blue-900'>
       
@@ -43,9 +46,18 @@ const Navbar = () => {
 
       {/* Right side: Icon Button */}
       <div>
-        <button className='text-blue-600 hover:text-blue-800 transition'>
+        {/* <button className='text-blue-600 hover:text-blue-800 transition'>
           <IoMdShare className='w-8 h-8 md:w-10 md:h-10' />
+        </button> */}
+         <button
+          onClick={() => setShowModal(true)}
+          className="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700"
+        >
+          Share
         </button>
+      
+
+      <ShareModal isOpen={showModal} onClose={() => setShowModal(false)} />
       </div>
     </div>
   )
