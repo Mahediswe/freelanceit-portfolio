@@ -34,11 +34,14 @@
 
 // export default Hero;
 
-import React from "react";
+import React, { useState } from "react";
 import profile from "../assetes/profile.jpg";
 import hero from "../assetes/hero.jpg";
+import ShareModal from "./ShareModal";
 
 const Hero = () => {
+      const [showModal, setShowModal] = useState(false);
+  
   return (
     <div className="relative max-w-2xl mx-auto">
       {/* Top Hero Image */}
@@ -78,9 +81,14 @@ const Hero = () => {
           <button className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition">
             Save to Phone
           </button>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">
+          <button
+            onClick={() => setShowModal(true)}
+            className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
+          >
             Share to Friend
           </button>
+                <ShareModal isOpen={showModal} onClose={() => setShowModal(false)} />
+
         </div>
       </div>
     </div>
