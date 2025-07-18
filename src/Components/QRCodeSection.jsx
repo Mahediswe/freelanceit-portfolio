@@ -14,7 +14,7 @@ const QRCodeSection = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4 p-6 bg-gray-100 rounded-md shadow-md max-w-2xl mx-auto">
+    <div className="flex flex-col items-center gap-4 p-6 bg-slate-100 max-w-2xl mx-auto">
       <h2 className="text-lg font-semibold text-gray-800">Download My QR Code</h2>
 
       <div

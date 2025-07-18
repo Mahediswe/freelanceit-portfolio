@@ -21,7 +21,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-10">
+    <div className="max-w-2xl mx-auto px-4 py-10 bg-slate-100">
       <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Contact Us</h2>
       
       <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-6 space-y-6">
@@ -67,12 +67,14 @@ const ContactForm = () => {
           required
         ></textarea>
 
-        <button
+        <div className=' text-center'>
+          <button
           type="submit"
-          className="bg-blue-600 text-white font-semibold py-3 px-6 rounded-md hover:bg-blue-700 transition"
+          className="bg-blue-600 text-white font-semibold py-3 px-6 rounded-md hover:bg-blue-700 transition text-center items-center"
         >
           Send Message
         </button>
+        </div>
       </form>
     </div>
   );

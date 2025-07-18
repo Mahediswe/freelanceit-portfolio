@@ -29,11 +29,11 @@ const ImageBoxGallery = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-5   bg-white rounded-xl shadow-lg">
+    <div className="max-w-2xl mx-auto p-5  bg-slate-100 ">
       <h2 className="text-2xl font-semibold text-center mb-4">Gallery</h2>
 
       {/* 2x2 Grid Box */}
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-2 gap-5 pt-2">
         {images.map((img, index) => (
           <img
             key={index}

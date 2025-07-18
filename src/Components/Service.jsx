@@ -43,16 +43,16 @@ const services = [
 
 const Service = () => {
   return (
-    <div className="max-w-2xl mx-auto px-4 py-12">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">
+    <div className="max-w-2xl mx-auto px-4 py-1 bg-slate-100">
+      <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
         Our Services
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-3">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center justify-start text-center h-60"
+            className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center justify-start text-center h-60 hover:shadow-lg"
           >
             <div className="mb-4">{service.icon}</div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">

@@ -40,12 +40,12 @@ import hero from "../assetes/hero.jpg";
 import ShareModal from "./ShareModal";
 
 const Hero = () => {
-      const [showModal, setShowModal] = useState(false);
-  
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className="relative max-w-2xl mx-auto">
       {/* Top Hero Image */}
-      <div className="h-100 overflow-hidden rounded-t-lg">
+      <div className="h-100 overflow-hidden ">
         <img
           src={hero}
           alt="Banner"
@@ -63,7 +63,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom Info Section */}
-      <div className="bg-slate-100 pt-20 pb-10 px-6 rounded-b-lg shadow-md">
+      <div className="bg-gray-300 pb-10 px-6 pt-24 shadow-md">
         <div className="text-center space-y-2">
           <h1 className="text-2xl font-bold text-gray-800">Adriyan Ayon</h1>
           <h2 className="text-lg text-blue-600 font-semibold">
@@ -78,17 +78,20 @@ const Hero = () => {
         </div>
 
         <div className="flex justify-center gap-4 mt-6">
-          <button className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition">
+          <a
+            href="/adriyan-ayon.vcf"
+            download
+            className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition inline-block"
+          >
             Save to Phone
-          </button>
+          </a>
           <button
             onClick={() => setShowModal(true)}
             className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
           >
             Share to Friend
           </button>
-                <ShareModal isOpen={showModal} onClose={() => setShowModal(false)} />
-
+          <ShareModal isOpen={showModal} onClose={() => setShowModal(false)} />
         </div>
       </div>
     </div>

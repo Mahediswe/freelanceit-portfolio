@@ -23,44 +23,41 @@
 
 import React, { useState } from "react";
 import { IoMdShare } from "react-icons/io";
-import logo from "../assetes/Logo.jpeg"
+import logo from "../assetes/Logo.jpeg";
 import ShareModal from "./ShareModal";
 
 const Navbar = () => {
-    const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className='max-w-2xl mx-auto flex justify-between items-center px-4 py-3 bg-blue-900'>
-      
-      {/* Left side: Logo + Title */}
-      <div className='flex items-center gap-4'>
-        <img 
-          src={logo} 
-          alt="Logo" 
-          className='w-full h-16 rounded-lg object-cover'
-        />
-        {/* <h1 className="text-lg md:text-2xl font-semibold text-gray-800">
-          Frelance Digital It
-        </h1> */}
+    <div className="sticky top-0 z-50 bg-blue-900 px-4 py-3 max-w-2xl mx-auto">
+      <div className="max-w-2xl mx-auto flex justify-between items-center">
+        
+        {/* Left side: Logo */}
+        <div className="flex items-center gap-4">
+          <img
+            src={logo}
+            alt="Logo"
+            className="w-full h-16 rounded-lg object-cover"
+          />
+        </div>
+
+        {/* Right side: Share Button */}
+        <div>
+          <button
+            onClick={() => setShowModal(true)}
+            className="flex items-center gap-2 bg-white text-blue-700 font-semibold px-4 py-2 rounded-lg hover:bg-blue-100 transition duration-200 shadow"
+          >
+            <IoMdShare className="text-xl" />
+            <span className="hidden md:block">Share</span>
+          </button>
+        </div>
       </div>
 
-      {/* Right side: Icon Button */}
-      <div>
-        {/* <button className='text-blue-600 hover:text-blue-800 transition'>
-          <IoMdShare className='w-8 h-8 md:w-10 md:h-10' />
-        </button> */}
-         <button
-          onClick={() => setShowModal(true)}
-          className="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700"
-        >
-          Share
-        </button>
-      
-
+      {/* Share Modal */}
       <ShareModal isOpen={showModal} onClose={() => setShowModal(false)} />
-      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
