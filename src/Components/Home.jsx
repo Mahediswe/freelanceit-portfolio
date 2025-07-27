@@ -8,6 +8,7 @@ import Footer from './Footer'
 import ImageGallery from './ImageGallary'
 import QRCodeSection from './QRCodeSection'
 import ShareModal from './ShareModal'
+import ShowMessages from './ShowMessages'
 const Home = () => {
   return (
     <div>
@@ -20,6 +21,7 @@ const Home = () => {
       <ContactForm/>
       <QRCodeSection/>
       <Footer/>
+      <ShowMessages/>
     </div>
   )
 }
