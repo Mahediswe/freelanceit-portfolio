@@ -45,8 +45,8 @@ const ShowMessages = () => {
             onClick={() => setSelectedMessage(msg)}
           >
             <div className='flex flex-row gap-10'>
-              <h4 className="font-bold text-gray-800">{msg.name}</h4>
-              <p className="text-gray-600 text-sm">
+              <h4 className="font-bold text-xl text-gray-800">{msg.name}</h4>
+              <p className="text-gray-600 text-md">
                 {msg.message.slice(0, 40)}...
               </p>
               <span className="text-xs text-gray-400">{msg.time}</span>
